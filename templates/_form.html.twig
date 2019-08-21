@@ -1,0 +1,10 @@
+{{ form_start(form)}}
+
+{{ form_row(form.username, {'label':'Nom d\'utlisateur','attr':{'placeholder':'Nom d\'utlisateur' , 'class':'form-control'}})}}
+{{ form_row(form.email, {'label':'Adresse email','attr':{'placeholder':'Adresse email', 'class':'form-control'}})}}
+{{ form_row(form.password, {'label':'mot passe','attr':{'placeholder':'mot passe', 'class':'form-control'}})}}
+{{ form_row(form.confirm_password, {'label':'Confirmation du mot passe','attr':{'placeholder':'Repertez de votre mot de passe', 'class':'form-control'}})}}
+
+<button type="submit" class="btn bueno-btn mt-30"> Inscription !</button>
+
+ {{ form_end(form)}}

@@ -1,0 +1,46 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block body %}
+
+ <div class="container">
+   
+   <h1>Editer le hotel</h1>
+
+
+   {{ form_start(form)}}
+
+
+<div class="row" >
+    <div class="col-md-5">   {{ form_row(form.nomhotel)}} </div>
+    <div class="col-md-5">   {{ form_row(form.adresse)}} </div>
+    <div class="col-md-5">{{ form_row(form.occupation)}} </div>
+    <div class="col-md-5">{{ form_row(form.service)}} </div>
+ 
+</div>
+  
+
+<div class="row">
+      <div class="col-md-2">{{ form_row(form.destination)}}</div>
+      <div class="col-md-2">{{ form_row(form.price)}}</div>
+      <div class="col-md-2">{{ form_row(form.avis)}} </div>
+</div>
+
+<div class="row">
+       <div class="col-md-10">{{ form_row(form.pension)}} </div>
+      <div class="col-md-10">{{ form_row(form.description)}} </div>
+      <div class="col-md-10">{{ form_row(form.hebergement)}} </div>
+      <div class="col-md-10">{{ form_row(form.restauration)}} </div>
+      <div class="col-md-10">{{ form_row(form.diveservice)}} </div>
+      <div class="col-md-10">{{ form_row(form.animation)}} </div>
+
+
+</div>
+ 
+   <button class="btn btn-primary">Editer</button>
+   {{ form_end(form)}}
+
+
+ </div>
+ {% endblock %}
+
+

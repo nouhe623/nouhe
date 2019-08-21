@@ -1,0 +1,148 @@
+{% extends 'basefront.html.twig' %}
+
+
+{% block title hotel.nomhotel %}
+
+{% block body %} 
+
+<section  class="class="post-news-area section-padding-100-0 mb-70""> 
+ <br> <br>
+
+ <div class="container">
+            <center> <h1>{{ hotel.nomhotel }}</h1></center>
+            
+<br> <br>
+
+         
+       <div class="row align-items-center" >      
+             
+                  
+
+       <div class="col-12 col-md-6"> 
+          {% for message in app.flashes('success') %}
+          <div class="alert alert-success">
+              {{ message }}
+          </div>
+      {% endfor %}
+  
+   
+
+     {{ form_start(form) }}
+      }
+
+        <button type="submit" class="btn btn-success">Je réserve !</button>
+
+    {{ form_end(form) }}
+
+        
+
+            <div class="big-post-content text-center mb-50" >  
+                     
+                        <div  class="adresse " >             
+
+
+                     <center>  <h6> <img src="{{ asset('front') }}/img/core-img/placeholder.png"alt="">    Adresse :  {{ hotel.adresse }} </h6> </center>       
+
+                    
+                        </div>
+  
+                    <div class="text_primary" style="font-size: 4rem;font-weight: bold;"> 
+                     
+                       <a href="#" class="btn bueno-btn">Voir disponibilite</a>
+                    </div> 
+
+            </div>
+       </div>
+
+ 
+
+            <div  class="col-12 col-md-6" >             
+             
+
+
+                        <div class="recipe-info">
+                              
+                                    <ul class="info-data">
+ 
+                                        <li><img src="{{ asset('front') }}/img/core-img/eye.png" alt=""> <center> <span style="color: rgb(255, 255, 255)" >Occupations   </span>  </center>  <center>  <span style="color: rgb(0, 0, 0) " >  {{ hotel.occupation  }} m2  </span>  </center>      </li>
+                                        <li><img src="{{ asset('front') }}/img/core-img/alarm-clock.png" alt=""> 
+                                          
+                                          
+                                          <center><span  style="color: rgb(255, 255, 255)" >Services</center>  <center><span style="color: rgb(0, 0, 0) " > {{ hotel.service  }} </span></center>  </li>
+
+
+                                        <li><img src="{{ asset('front') }}/img/core-img/tray.png" alt=""><center> <span   style="color: rgb(255, 255, 255)" >Chambres </span> </center>  </li>
+                                        <li><img src="{{ asset('front') }}/img/core-img/sandwich.png" alt=""><center> <span  style="color: rgb(255, 255, 255)" >Pensions   </span> </center>   <center><span style="color: rgb(0, 0, 0) " >{{ hotel.pension  }}</span> </center>  </li>
+                                        <li><img src="{{ asset('front') }}/img/core-img/compass.png" alt=""> <center><span  style="color: rgb(255, 255, 255)" >A partir de   </span>  </center>  <center> <span style="color: rgb(0, 0, 0) " ><font size="6">  {{ hotel.price  }} DT </font> </span> </center>  </li>
+                                    </ul>
+                         </div>
+
+ 
+             </div>
+
+
+
+
+      </div>
+
+</div>
+ </div>
+ <div class="container">
+<div class="row align-items-center" >      
+
+ <div class="ingredients" >
+                <h1 style="color: rgb(0, 0, 0);text-align:center" >     <center>   <font size="6"> DESCRIPTION </font>  </p> </center>  
+
+                <center> <p>  <font size="4">  {{ hotel.description }}  </font>  </p> </center>  
+ </div>
+  <br><br>
+  
+            <div class="recipe-info">
+                  <h4 style="color: rgb(255, 255, 255);text-align:center" > <center> Équipements de l'établissement</center>  </h4> <br>
+                        <ul class="info-data">
+
+                            <li><img src="{{ asset('front') }}/img/core-img/eye.png" alt=""> <center> <span style="color: rgb(255, 255, 255)" >Hébergement   </span>  </center>  <center>  <span style="color: rgb(0, 0, 0) " >  {{ hotel.hebergement  }} m2  </span>  </center>      </li>
+                            <li><img src="{{ asset('front') }}/img/core-img/alarm-clock.png" alt=""> 
+                              
+                              
+                              <center><span  style="color: rgb(255, 255, 255)" >Restauration</center>  <center><span style="color: rgb(0, 0, 0) " > {{ hotel.restauration  }} </span></center>  </li>
+
+
+                            <li><img src="{{ asset('front') }}/img/core-img/tray.png" alt=""><center> <span   style="color: rgb(255, 255, 255)" >Animation </span> </center>     <center><span style="color: rgb(0, 0, 0) " >   </span></center>     </li>
+                            <li><img src="{{ asset('front') }}/img/core-img/sandwich.png" alt="">
+                              <center> <span  style="color: rgb(255, 255, 255)" >Divers    </span> </center>
+                              <center> <span  style="color: rgb(255, 255, 255)" > services   </span> </center>
+                              <center><span style="color: rgb(0, 0, 0) " >{{ hotel.diveservice  }}</span> </center>  </li>
+                         </ul>
+             </div>          
+ </div>
+   </div>      
+   </section>
+{% endblock %}
+ 
+{% block javascripts %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
+<script>
+   
+
+    function calculateAmount() {
+        // On chope les dates
+ 
+
+        if(startDate && endDate && startDate < endDate){
+            const DAY_TIME  = 24 * 60 * 60 * 1000;
+
+            const interval  = endDate.getTime() - startDate.getTime();
+            const days      = interval / DAY_TIME;
+            const nombre    = days * Hotel.price ;
+
+            $('#days').text(days);
+            $('#nombre').text(nombre.toLocaleString('fr-FR'));
+        }
+    }
+
+</script>
+
+{% endblock %}

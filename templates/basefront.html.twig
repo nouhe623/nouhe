@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {% block stylesheets %} 
+
+    <!-- Title -->
+    <title>{% block title %}Bueno - Food Blog HTML Template{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('front') }}/img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('front') }}/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('front') }}/style.css">
+
+    {% endblock %}
+
+</head>
+
+ 
+<body>
+
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area bg-img bg-overlay" style="background-image: url(img/bg-img/header.jpg);">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <div class="col-12 col-sm-6">
+                        <!-- Top Social Info -->
+                        <div class="top-social-info">
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-5 col-xl-4">
+                        <!-- Top Search Area -->
+                        <div class="top-search-area">
+                            <form action="#" method="post">
+                                <input type="search" name="top-search" id="topSearch" placeholder="Search">
+                                <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo Area -->
+        <div class="logo-area">
+         </div>
+
+        <!-- Navbar Area -->
+        <div class="bueno-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="buenoNav">
+
+                        <!-- Toggler -->
+                        <div id="toggler"><img src="{{ asset('front') }}/img/core-img/toggler.png" alt=""></div>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ path('Home')}}">ACCUEIL</a></li>
+                                     <li><a href="#"> DEMANDE RESERVATION</a></li>                               
+                                    <li><a href="#">VILLES</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">                                                                                                                                                                                                                               
+                                                <li><a href="">AIN DRAHAM</a></li>
+                                                <li><a href="">DJERBA</a></li>
+                                                <li><a href="">GAMMARTH Post</a></li>
+                                                <li><a href="">HAMMAMET</a></li>
+                                                 
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="">KELUBIA</a></li>
+                                                <li><a href="">MAHDIA</a></li>
+                                                <li><a href="">MONASTIR</a></li>
+                                                <li><a href="">NABEUL</a></li>
+                                                 
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="">NEFTA</a></li>
+                                                <li><a href="">Sfax</a></li>
+                                                <li><a href="">Sousse</a></li>
+                                                <li><a href="">Tabarka</a></li>
+                                                
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="">Tozeur</a></li>
+                                                <li><a href="">Tataouine</a></li>
+                                                <li><a href="">Tunis</a></li>
+                                                <li><a href="">Zarzis</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                     <li><a href="{{ path('contact.index')}}">CONTACTEZ-NOUS
+                                    </a></li>
+                                </ul>
+
+                                 
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    {% block body %}
+ 
+    {% endblock %}
+    <!-- ##### Treading Post Area Start ##### -->
+    <div class="treading-post-area" id="treadingPost">
+        <div class="close-icon">
+            <i class="fa fa-times"></i>
+        </div>
+
+        <h3>TOP PROMO VACANCES ÉTÉ 2019       </h3>
+
+        <!-- Single Blog Post -->
+        <div class="single-blog-post style-1 d-flex flex-wrap mb-30">
+            <!-- Blog Thumbnail -->
+            <div class="blog-thumbnail">
+                <img src="{{ asset('front') }}/img/bg-img/1a.jpg" alt="">
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <a href="#" class="post-tag">The Best</a>
+                <a href="#" class="post-title">Friend eggs with ham</a>
+                <div class="post-meta">
+                    <a href="#" class="post-date">July 11, 2018</a>
+                    <a href="#" class="post-author">By Julia Stiles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Blog Post -->
+        <div class="single-blog-post style-1 d-flex flex-wrap mb-30">
+            <!-- Blog Thumbnail -->
+            <div class="blog-thumbnail">
+                <img src="{{ asset('front') }}/img/bg-img/1a.jpg" alt="">
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <a href="#" class="post-tag">The Best</a>
+                <a href="#" class="post-title">Mushrooms with pork chop</a>
+                <div class="post-meta">
+                    <a href="#" class="post-date">July 11, 2018</a>
+                    <a href="#" class="post-author">By Julia Stiles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Blog Post -->
+        <div class="single-blog-post style-1 d-flex flex-wrap mb-30">
+            <!-- Blog Thumbnail -->
+            <div class="blog-thumbnail">
+                <img src="{{ asset('front') }}/img/bg-img/1a.jpg" alt="">
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <a href="#" class="post-tag">The Best</a>
+                <a href="#" class="post-title">Birthday cake with chocolate</a>
+                <div class="post-meta">
+                    <a href="#" class="post-date">July 11, 2018</a>
+                    <a href="#" class="post-author">By Julia Stiles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Blog Post -->
+        <div class="single-blog-post style-1 d-flex flex-wrap mb-30">
+            <!-- Blog Thumbnail -->
+            <div class="blog-thumbnail">
+                <img src="{{ asset('front') }}/img/bg-img/1a.jpg" alt="">
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <a href="#" class="post-tag">The Best</a>
+                <a href="#" class="post-title">Friend eggs with ham</a>
+                <div class="post-meta">
+                    <a href="#" class="post-date">July 11, 2018</a>
+                    <a href="#" class="post-author">By Julia Stiles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Blog Post -->
+        <div class="single-blog-post style-1 d-flex flex-wrap mb-30">
+            <!-- Blog Thumbnail -->
+            <div class="blog-thumbnail">
+                <img src="{{ asset('front') }}/img/bg-img/1a.jpg" alt="">
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <a href="#" class="post-tag">The Best</a>
+                <a href="#" class="post-title">Mushrooms with pork chop</a>
+                <div class="post-meta">
+                    <a href="#" class="post-date">July 11, 2018</a>
+                    <a href="#" class="post-author">By Julia Stiles</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Blog Post -->
+        <div class="single-blog-post style-1 d-flex flex-wrap mb-30">
+            <!-- Blog Thumbnail -->
+            <div class="blog-thumbnail">
+                <img src="{{ asset('front') }}/img/bg-img/1a.jpg" alt="">
+            </div>
+            <!-- Blog Content -->
+            <div class="blog-content">
+                <a href="#" class="post-tag">The Best</a>
+                <a href="#" class="post-title">Birthday cake with chocolate</a>
+                <div class="post-meta">
+                    <a href="#" class="post-date">July 11, 2018</a>
+                    <a href="#" class="post-author">By Julia Stiles</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    
+    
+
+  
+ 
+     <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-5">
+                    <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Promohotel.tn une marque de l'agence de voyage Monarque travel en Tunisie, la qualité au bon prix.
+                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+                <div class="col-12 col-sm-7">
+                    <!-- Footer Nav -->
+                    <div class="footer-nav">
+                        <ul>
+                             <!-- Login/Register -->
+
+                            <li><a href="#">Login / Register</a></li>
+                        
+                           
+                    </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+     {% block javascript %}
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{{ asset('front') }}/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="{{ asset('front') }}/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="{{ asset('front') }}/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="{{ asset('front') }}/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="{{ asset('front') }}/js/active.js"></script>
+ 
+ {% endblock %}
+</body>
+ </html>
